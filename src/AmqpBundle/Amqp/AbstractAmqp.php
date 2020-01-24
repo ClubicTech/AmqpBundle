@@ -38,7 +38,7 @@ abstract class AbstractAmqp
                   ->setReturn($return)
                   ->setExecutionTime($time);
 
-            $this->eventDispatcher->dispatch('amqp.command', $event);
+            $this->eventDispatcher->dispatch($event, 'amqp.command');
         }
     }
 

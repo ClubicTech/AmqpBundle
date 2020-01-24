@@ -20,7 +20,7 @@ class M6WebAmqpExtension extends test
 
         $parameterBag = new ParameterBag(array('kernel.debug' => true));
         $container = new ContainerBuilder($parameterBag);
-        $container->set('event_dispatcher', new \mock\Symfony\Component\EventDispatcher\EventDispatcherInterface());
+        $container->set('event_dispatcher', new \mock\Symfony\Contracts\EventDispatcher\EventDispatcherInterface());
         $container->registerExtension($extension);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../Fixtures/'));
