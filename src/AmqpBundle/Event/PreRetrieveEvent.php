@@ -3,7 +3,7 @@
 namespace M6Web\Bundle\AmqpBundle\Event;
 
 use AMQPEnvelope;
-use Symfony\Component\EventDispatcher\Event as SymfonyEvent;
+use Symfony\Contracts\EventDispatcher\Event as SymfonyEvent;
 
 /**
  * Pre retrieve message event.
